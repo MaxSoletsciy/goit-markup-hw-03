@@ -1,0 +1,9 @@
+Два варіанти розміщення елементів 
+списку (відступи між елементами)
+.list .item + .item {
+    margin-left: 50px;
+} 
+
+.list .item:not(:last-child) {
+	margin-right: 50px;
+}
