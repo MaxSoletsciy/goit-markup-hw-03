@@ -140,10 +140,6 @@ a {
 
 .conteiner.header-flex {
 	border-bottom: 1px solid #ECECEC;
-	border-top: 1px solid var(--logo-black);
-	border-left: 1px solid var(--logo-black);
-	border-right: 1px solid var(--logo-black);
-	
 }
 
 /* hero */
@@ -224,13 +220,36 @@ a {
 
 .features {
 	display: flex;
+	justify-content: space-between;
 	padding-left: 0px;
+}
+
+.list.features .item:not(:last-child) {
+	margin-right: 30px;
 }
 
 .features .item {
 	width: 270px;
 	height: 101px;
 }
+
+.desc-item {
+	padding-top: 10px;
+}
+
+
+/* Зображення виступає за межі div */
+.empl-flex {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/* .empl-flex .item:not(:last-child) {
+	margin-right: 30px;
+} */
 
 .desc-item,
 .footer .list {
@@ -262,12 +281,23 @@ a {
 	text-align: center;
 }
 
+.team-flex .item {
+	width: 270px;
+	height: 368px;
+}
+
 .section {
 	padding-top: 94px;
 	padding-bottom: 94px;
 }
 
 /* футер */
+.logo-footer {
+	display: inline-block;
+	padding-top: 60px;
+	padding-bottom: 20px;
+}
+
 .footer {
 	background-color: var(--background-hero-footer-color);
 }
@@ -283,8 +313,30 @@ a {
 	font-style: normal;
 }
 
+.footer-list li {
+	display: inline-block;
+}
+
+.footer-list li:not(:last-child) {
+	padding-bottom: 9px;
+}
+
+.footer-list {
+	display: flex;
+	padding-left: 0;
+	flex-direction: column;
+	padding-bottom: 60px;
+}
+
+
 /* Сторінка портфоліо */
 .porf-button {
+	padding: 6px 22px;
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+	0px 1px 2px rgba(0, 0, 0, 0.08),
+	0px 2px 2px rgba(0, 0, 0, 0.12);
+	border-radius: 4px;
+
 	background-color: var(--bg-section-team);
 	color: var(--title-text-color);
 	cursor: pointer;
@@ -295,6 +347,16 @@ a {
 	line-height: 1.62;
 	text-align: center;
 }
+
+.filters-list {
+	display: flex;
+	justify-content: center;
+}
+
+.filters-list .item.item:not(:last-child) {
+	margin-right: 8px;
+}
+
 
 .porf-button:hover,
 .porf-button:focus {
