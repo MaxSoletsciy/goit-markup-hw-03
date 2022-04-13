@@ -7,6 +7,8 @@
 	--bg-section-team: #f5f4fa;
 	--logo-black: #000000;
 	--bg-button-hover: #188CE8;
+	--border-card-color: #EEEEEE;
+	--border-header-color: #ECECEC;
 }
 
 html {
@@ -39,6 +41,7 @@ h3,
 ul, 
 p {
 	margin: 0;
+	padding: 0;
 }
 
 .section {
@@ -91,13 +94,14 @@ a {
 .site-nav {
 	display: flex;
 	margin-left: 93px;
-	padding-top: 32px;
-	padding-bottom: 32px;
 }
 
 .site-nav .link {
 	color: var(--title-text-color);
 	font-weight: 500;
+
+	padding-top: 32px;
+	padding-bottom: 32px;
 }
 
 .contacts-head .email:hover,
@@ -114,7 +118,7 @@ a {
 	padding-left: 0px;
 	align-items: center;
 
-	font-weight: 500px;
+	font-weight: 500;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 }
@@ -132,6 +136,7 @@ a {
 
 .contacts-head {
 	display: flex;
+	margin-left: auto;
 }
 
 .site-nav .link, 
@@ -142,7 +147,6 @@ a {
 .header-flex {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 }
 
 .header-nav-flex {
@@ -150,12 +154,15 @@ a {
 	align-items: center;
 }
 
-.conteiner.header-flex {
-	border-bottom: 1px solid #ECECEC;
+header {
+	border-bottom: 1px solid var(--border-header-color);
 }
 
 /* hero */
 .hero {
+	padding-top: 200px;
+	padding-bottom: 200px;
+
 	text-align: center;
 
 	background-color: var(--background-hero-footer-color);
@@ -168,13 +175,11 @@ a {
 
 .hero-button {
 	display: inline-block;
-	min-width: 200px;
 	padding: 10px 32px;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-color: transparent;
 	border-radius: 4px;
 	text-align: center;
-	margin-bottom: 200px;
 
 	color: var(--text-title-hero);
 	background-color: var(--accent-color);
@@ -197,7 +202,6 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 30px;
-	padding-top: 200px;
 	
 	font-weight: 900;
 	font-size: 44px;
@@ -247,11 +251,13 @@ a {
 }
 
 .desc-item {
-	padding-top: 10px;
+	margin-top: 10px;
 }
 
+.section.empl {
+	padding-top: 0px;
+}
 
-/* Зображення виступає за межі div */
 .empl-flex {
 	display: flex;
 	justify-content: space-between;
@@ -259,10 +265,6 @@ a {
 	padding-left: 0;
 	padding-right: 0;
 }
-
-/* .empl-flex .item:not(:last-child) {
-	margin-right: 30px;
-} */
 
 .desc-item,
 .footer .list {
@@ -281,8 +283,12 @@ a {
 	background-color: var(--bg-section-team);
 }
 
+.team img {
+	margin-bottom: 30px;
+}
+
 .team h3 {
-	margin-top: 30px;
+	margin-bottom: 10px;
 	margin-left: auto;
 	margin-right: auto;
 
@@ -293,7 +299,7 @@ a {
 }
 
 .team p {
-	margin: 10px auto 30px;
+	margin: 0 auto 30px;
 
 	font-size: 16px;
 	line-height: 1.18;
@@ -303,7 +309,7 @@ a {
 .team-flex {
 	display: flex;
 	padding: 0px;
-	padding-top: 50px;
+	margin-top: 50px;
 }
 
 .team-flex .item {
@@ -323,12 +329,14 @@ a {
 /* футер */
 .logo-footer {
 	display: inline-block;
-	padding-top: 60px;
-	padding-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .footer {
 	background-color: var(--background-hero-footer-color);
+
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 
 .adress {
@@ -342,19 +350,8 @@ a {
 	font-style: normal;
 }
 
-.footer-list li {
-	display: inline-block;
-}
-
 .footer-list li:not(:last-child) {
-	padding-bottom: 9px;
-}
-
-.footer-list {
-	display: flex;
-	padding-left: 0;
-	flex-direction: column;
-	padding-bottom: 60px;
+	margin-bottom: 9px;
 }
 
 
@@ -414,8 +411,10 @@ a {
 }
 
 .card-content {
-	background: #FFFFFF;
-	border: 1px solid #EEEEEE;
+	background: var(--text-title-hero);
+	border-bottom: 1px solid var(--border-card-color);
+	border-left: 1px solid var(--border-card-color);
+	border-right: 1px solid var(--border-card-color);
 	padding: 20px 24px;
 }
 
